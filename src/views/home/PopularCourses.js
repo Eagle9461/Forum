@@ -38,7 +38,7 @@ function PopularCourses() {
 
   const recommendedJobsList = [
     {
-      title: "Security Job",
+      title: "Security Courses",
       salary: {
         from: 15000,
         to: 25000
@@ -48,7 +48,7 @@ function PopularCourses() {
         time: "14 weeks, Self paced"
       }
     }, {
-      title: "Security Job",
+      title: "Security Courses",
       salary: {
         from: 15000,
         to: 25000
@@ -58,7 +58,7 @@ function PopularCourses() {
         time: "14 weeks, Self paced"
       }
     }, {
-      title: "Security Job",
+      title: "Security Courses",
       salary: {
         from: 15000,
         to: 25000
@@ -68,7 +68,7 @@ function PopularCourses() {
         time: "14 weeks, Self paced"
       }
     }, {
-      title: "Security Job",
+      title: "Security Courses",
       salary: {
         from: 15000,
         to: 25000
@@ -77,8 +77,8 @@ function PopularCourses() {
         jobtype: "online",
         time: "14 weeks, Self paced"
       }
-    },{
-      title: "Security Job",
+    }, {
+      title: "Security Courses",
       salary: {
         from: 15000,
         to: 25000
@@ -91,7 +91,7 @@ function PopularCourses() {
   ]
   return (
     <Container className="popular-courses-container">
-      <div className="title-main">Popular Jobs</div>
+      <div className="title-main">Popular Courses</div>
       <Slider {...settings}>
         {
           recommendedJobsList.map((c, i) =>
@@ -99,7 +99,11 @@ function PopularCourses() {
           )
         }
       </Slider>
-      <Button className="view-more" outline>View more Courses</Button>
+      <Button className="view-more" outline>
+        <a href="/courses">
+          View more Courses
+        </a>
+      </Button>
     </Container>
   );
 }

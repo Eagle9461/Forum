@@ -948,6 +948,19 @@ footer a {
     display: none;
   }
 }
+.agencies-block{
+  background: white;
+  border-radius: 3%;
+  padding: 8px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.agencies-block:hover{
+  box-shadow: 5px 5px #ddd;
+}
+.agencies-block:hover a{
+  text-decoration: none;
+}
 /* SupportForYou */
 
 .support-for-you {
@@ -966,12 +979,12 @@ footer a {
 }
 
 .career-advice-card {
-  min-height: 20vw;
-  min-width: fit-content;
 }
 
 .career-advice-card .card-readmore {
   text-decoration: underline;
+  display: inline-flex;
+  margin-top: 38px;
 }
 
 /* ------------------Jobs------------------ */

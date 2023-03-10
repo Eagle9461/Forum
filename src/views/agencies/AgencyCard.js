@@ -5,20 +5,17 @@ function AgencyCard(props) {
     return (
         <Card className={props.className + " card2 course-card"}>
             <CardBody>
-                <a className="card-title" href="#">Ivy Resource Group-Construction Recruitment</a>
+                <a className="card-title" href={props.agencydata.link}>{props.agencydata.title} </a>
                 <div className="created-date-and-author">International Career Institute</div>
                 <div className="created-date-and-author">Tutorial Support - Interest Free Payment Plans - Course Developed in Consultation with Industry</div>
 
                 <div className="row card-metadata-group">
-                    <div className="col-sm-6">
-                        <div className="card-metadata card-metadata-salary"> 15k - 100k+</div>
-                    </div>
-                    <div className="col-sm-6">
-                        <div className="card-metadata card-metadata-type"> Part Time, Permanent, Temporary</div>
-                    </div>
-                    <div className="col-sm-6">
-                        <div className="card-metadata card-metadata-location">East Anglia, and London</div>
-                    </div>
+                    {props.agencydata.services &&<div className="col-sm-12">
+                        <div className="card-metadata card-metadata-type">{props.agencydata.services}</div>
+                    </div>}
+                    {props.agencydata.address && <div className="col-sm-12">
+                        <div className="card-metadata card-metadata-location">{props.agencydata.address}</div>
+                    </div>}
                 </div>
                 <div className="card-actions">
                     <button>
@@ -30,13 +27,11 @@ function AgencyCard(props) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="25px" height="21" viewBox="0 0 512 512"><title>box-cross</title><path d="M96 448Q82 448 73 439 64 430 64 416L64 96Q64 82 73 73 82 64 96 64L416 64Q430 64 439 73 448 82 448 96L448 416Q448 430 439 439 430 448 416 448L96 448ZM256 288L320 352 352 320 288 256 352 192 320 160 256 224 192 160 160 192 224 256 160 320 192 352 256 288Z" /></svg>
                     </button>
                 </div>
-                <a className="card-readmore" href="#">
+                {props.agencydata.description &&<a className="card-readmore">
                     <i className="now-ui-icons arrows-1_minimal-down"></i>&nbsp;
                     <span>About us</span>
-                </a>
-                <div className="course-offer">
-                    Ivy Resource Group is an established recruitment consultancy agency with years of experience in supplying skilled, unskilled and professional personnel for temporary and permanent roles in the construction industry. How can we add value to your business? Competitive rates - Talented and reliable candidates - 24/7 support - Sector specific & experienced Consultants & Managers.
-                </div>
+                </a>}
+                <div className="course-offer">{props.agencydata.description}</div>
                 <div className="course-badge-group">
                     <span className="badge badge-pill text-info">Great service</span>
                     <span className="badge badge-pill text-danger">Highly rated</span>

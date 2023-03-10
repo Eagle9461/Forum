@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -14,47 +15,47 @@ function LinkOtherJobsites() {
       <Container>
         <Row>
           <Col md={6} sm={12}>
-            <div className="find-job-slogan">Find a job you'll love with the UK's #1 job site
-            </div>
-            <h5 className="find-job-slogan-sub">Your next role could be with one of these leading companies.</h5>
-
+            <div className="find-job-slogan">All in one Software for Security companies</div>
           </Col>
           <Col md={6}>
             <Row>
               <Col md={4} sm={6} xs={12} className="text-center">
-                <a href="#">
-                  <img src={require("assets/img/safestore-lge 1.png")}></img>
+                <a href="/agencies">
+                  <div className="agencies-block">Manage Security Guard</div>
+                </a>
+              </Col>
+
+              <Col md={4} sm={6} xs={12} className="text-center">
+                <a href="/agencies">
+                  <div className="agencies-block">Manage Subcontractors</div>
                 </a>
               </Col>
               <Col md={4} sm={6} xs={12} className="text-center">
-                <a href="#">
-                  <img src={require("assets/img/safestore-lge 1.png")}></img>
+                <a href="/agencies">
+                  <div className="agencies-block">Manage Invoices</div>
                 </a>
               </Col>
               <Col md={4} sm={6} xs={12} className="text-center">
-                <a href="#">
-                  <img src={require("assets/img/safestore-lge 1.png")}></img>
+                <a href="/agencies">
+                  <div className="agencies-block">Track Security Guard</div>
                 </a>
               </Col>
               <Col md={4} sm={6} xs={12} className="text-center">
-                <a href="#">
-                  <img src={require("assets/img/safestore-lge 1.png")}></img>
+                <a href="/agencies">
+                  <div className="agencies-block">Track Timesheets</div>
                 </a>
               </Col>
               <Col md={4} sm={6} xs={12} className="text-center">
-                <a href="#">
-                  <img src={require("assets/img/safestore-lge 1.png")}></img>
-                </a>
-              </Col>
-              <Col md={4} sm={6} xs={12} className="text-center">
-                <a href="#">
-                  <img src={require("assets/img/safestore-lge 1.png")}></img>
+                <a href="/agencies">
+                  <div className="agencies-block">Manage Clients</div>
                 </a>
               </Col>
             </Row>
           </Col>
         </Row>
-        <Button className="m-auto d-block" outline>See all companies</Button>
+        <a href="/agencies">
+          <Button className="m-auto d-block" outline>See all companies</Button>
+        </a>
       </Container>
 
     </div>

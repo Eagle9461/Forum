@@ -2,7 +2,7 @@ import api from "./service/api";
 import axios from "axios";
 export const getJobRequest = (url, payload) => 
     axios
-        .post("http://167.99.204.238/api.php?type=jobs_filter", payload)
+        .post("https://focuseuk.com/api.php?type=all_security_jobs", payload)
         .then((res) => res)
         .catch(err => err.response)
 

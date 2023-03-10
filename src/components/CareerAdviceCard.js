@@ -8,7 +8,7 @@ function CareerAdviceCard(props) {
             <CardImg alt="..." src={require("assets/img/Rectangle_14.png")} top></CardImg>
 
                 <div>Vision2Learn</div>
-                <a className="card-readmore" href="#">readmore</a>
+                <a className="card-readmore" href="/jobs">readmore</a>
             </CardBody>
         </Card>
     )

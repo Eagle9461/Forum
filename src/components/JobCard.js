@@ -1,7 +1,7 @@
 const { Card, CardBody } = require("reactstrap");
 
 const defaultJobdata  = {
-    title: "Security Job",
+    title: "Security Course",
     salary: {
         from: 15000,
         to: 25000
@@ -17,14 +17,14 @@ function JobCard({ jobdata = defaultJobdata, className = "" }) {
     return (
         <Card className={className + " job-card"}>
             <CardBody>
-                <a className="card-title" href="#">{jobdata.title}</a>
+                <a className="card-title" href="/courses">{jobdata.title}</a>
                 <div>Vision2Learn</div>
                 <div className="card-job-salary-range">{`${jobdata.salary.from} - ${jobdata.salary.to} `}</div>
                 <div className="card-job-type">
                     <div>{jobdata.type.jobtype}</div>
                     <div>{jobdata.type.time}</div>
                 </div>
-                <a className="card-readmore" href="#">Read More</a>
+                <a className="card-readmore" href="/courses">Read More</a>
             </CardBody>
         </Card>
     )

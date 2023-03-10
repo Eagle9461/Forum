@@ -18,12 +18,12 @@ function JobSearchFilter(props) {
         { label: "Liverpool", value: "Liverpool" },
     ];
     useEffect(() => {
-        axios.get("http://167.99.204.238/api.php?type=all_locations")
+        axios.get("https://focuseuk.com/api.php?type=all_locations")
             .then(res => { setLocations(res.data) })
             .catch(err => { })
     }, [])
     useEffect(() => {
-        axios.get("http://167.99.204.238/api.php?type=all_categories")
+        axios.get("https://focuseuk.com/api.php?type=all_categories")
             .then(res => { setCategories(res.data) })
             .catch(err => { })
     }, [])

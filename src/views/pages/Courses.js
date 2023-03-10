@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 // core components
 import Navbar from "components/Navbar.js";
@@ -8,13 +9,25 @@ import CourseCard from "components/CourseCard";
 
 import Footer from "components/Footer.js";
 import { Col, Row, Container, Button, Card, CardBody, DropdownItem, DropdownToggle, DropdownMenu, UncontrolledDropdown } from "reactstrap";
+import PaginationComponent from "react-reactstrap-pagination";
 
 
 // sections for this page
 
 
 function Courses() {
+    const [courses, setCourses] = useState([]);
+    const [selectedPage, setSelectedPage] = useState(1)
+    const pageSize = 4
+    useEffect(() => {
+        axios.get("https://focuseuk.com/api.php?type=all_courses")
+            .then(res => { setCourses(res.data) })
+            .catch(err => { })
+    }, [])
 
+    const handleSelected = (page) => {
+        setSelectedPage(page)
+    }
     return (
         <div className="courses">
             <Navbar />
@@ -25,7 +38,7 @@ function Courses() {
                         <CourseSearchFilter />
                     </Col>
                     <Col md={8}>
-                        <Card className="course-applied-filters">
+                        {/* <Card className="course-applied-filters">
                             <CardBody>
                                 <div className="row">
 
@@ -65,8 +78,25 @@ function Courses() {
                                     </div>
                                 </div>
                             </CardBody>
-                        </Card>
-                        <CourseCard />
+                        </Card> */}
+                        {courses.slice((selectedPage - 1) * pageSize, selectedPage * pageSize).map((c, i) =>
+                            <CourseCard key={i} coursedata={c} id={i} />
+                        )}
+                        {courses.length ? <PaginationComponent
+                            totalItems={courses.length}
+                            pageSize={pageSize}
+                            onSelect={handleSelected}
+                            firstPageText="<<"
+                            previousPageText="<"
+                            nextPageText=">"
+                            lastPageText=">>"
+                            maxPaginationNumbers={4}
+                        /> :
+                            <div className="text-center">
+                                <div className="font-weight-bold">No results matched your search</div>
+                                <div>Try a different search for better results</div>
+                            </div>
+                        }
                     </Col>
                 </Row>
             </Container>

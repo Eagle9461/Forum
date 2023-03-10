@@ -38,11 +38,10 @@ function Jobs() {
       <Navbar />
       <div className="search-form-wrapper"><Container><JobSearchForm className="in-jobs" /></Container></div>
       <Container>
-        <div className="title-1">35,594 Administrator Jobs</div>
         <Row>
           <Col md={4}>
             <JobSearchFilter />
-            <RecommendedCourses />
+            {/* <RecommendedCourses /> */}
           </Col>
           <Col md={8}>
             {loading ? <JobSkeleton /> : data.slice((selectedPage - 1) * pageSize, selectedPage * pageSize).map((c, i) =>
@@ -52,6 +51,11 @@ function Jobs() {
               totalItems={data.length}
               pageSize={pageSize}
               onSelect={handleSelected}
+              firstPageText="<<"
+              previousPageText="<"
+              nextPageText=">"
+              lastPageText=">>"
+              maxPaginationNumbers={4}
             /> :
               <div className="text-center">
                 <div className="font-weight-bold">No results matched your search</div>

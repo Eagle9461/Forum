@@ -6,20 +6,19 @@ function CourseCard(props) {
         <Card className={props.className + " card2 course-card"}>
             <CardBody>
                 <div className="row">
-                    <div className="col-sm-0 col-md-3">
+                    {/* <div className="col-sm-0 col-md-3">
                         <img className="create-company-logo" src={require("assets/img/278_logo.gif")} />
-                    </div>
+                    </div> */}
                     <div className="col-sm-12 col-md-9">
-                        <a className="card-title" href="#">Security Officer Course</a>
-                        <div className="created-date-and-author">International Career Institute</div>
-                        <div className="created-date-and-author">Tutorial Support - Interest Free Payment Plans - Course Developed in Consultation with Industry</div>
+                        <a className="card-title" href={props.coursedata.link}>{props.coursedata.title}</a>
+                        <div className="created-date-and-author" style={{marginLeft: "10px"}}>{props.coursedata.agency_name} </div>
 
                         <div className="row card-metadata-group">
                             <div className="col-sm-6">
-                                <div className="card-metadata card-metadata-enquiries"> 48,586 enquiries</div>
+                                <div className="card-metadata"> {props.coursedata.price} </div>
                             </div>
                             <div className="col-sm-6">
-                                <div className="card-metadata card-metadata-type"> Self-paced</div>
+                                <div className="card-metadata card-metadata-type"> {props.coursedata.duration}</div>
                             </div>
                         </div>
                     </div>
@@ -40,9 +39,7 @@ function CourseCard(props) {
                             <i className="now-ui-icons arrows-1_minimal-down"></i>&nbsp;
                             <span>What does this course offer?</span>
                         </a>
-                        <div className="course-offer">
-                            Course Units: 1 Health and Wellness • What is health and wellness • Health determinants • Behaviour of ill people • Promoting health 2 Rehabilitation Nursing • The meaning of rehabilitation • The multidisciplinary team • Practices in rehabilitation
-                        </div>
+                        <div className="course-offer">{props.coursedata.content} </div>
                         <div className="course-badge-group">
                             <span className="badge badge-pill text-info">Great service</span>
                             <span className="badge badge-pill text-danger">Highly rated</span>

@@ -19,7 +19,7 @@ function JobCard2({ jobdata = defaultJobdata, className = "", id }) {
         <Card className={className + " card2 card2-promoted"}>
             <CardBody>
                 <div className="row">
-                    <div className="col-sm-12 col-md-9">
+                    <div className="col-sm-12 col-md-12">
                         <div className="promoted">Promoted</div>
                         <a className="card-title" href={jobdata.apply_link}>{jobdata.title}</a>
                         <div className="created-date-and-author">{jobdata.timestamp} </div>
@@ -32,9 +32,6 @@ function JobCard2({ jobdata = defaultJobdata, className = "", id }) {
                                 <div className="card-metadata card-metadata-type"> {jobdata.job_types}</div>
                             </div>
                         </div>
-                    </div>
-                    <div className="d-none d-md-block col-md-3">
-                        <img className="create-company-logo" src={require("assets/img/Rectangle 39.png")} />
                     </div>
                     <div className="card-actions">
                         <button>

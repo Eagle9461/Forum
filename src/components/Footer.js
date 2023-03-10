@@ -90,28 +90,6 @@ function DarkFooter() {
           <h2>for Security Sector</h2>
 
         </div>
-        <Row>
-          <Col xs={7}>
-            <a href="#" title="Buy James Reed's best-selling book - Why You" rel="nofollow" target="_blank" className="image" data-gtm-category="jobseeker_footer" data-gtm="james_reed_book_click" data-gtm-value="why_you">
-              <img style={{ width: "100px", height: "150px" }} alt="Buy James Reed's best-selling book - Why You" title="Buy James Reed's best-selling book - Why You" loading="lazy" src={require("assets/img/image 2.png")} className="b-loaded" />
-            </a>
-            <div style={{ paddingLeft: "3px", display: "inline-block" }}>
-              <div>Nail your next interview</div>
-              <div>Learn how to answer 101 of the most common questions now.</div>
-              <div>Buy James read best selling books</div>
-            </div>
-          </Col>
-          <Col xs={5} className="text-right">
-            <a href="#">
-              <img src={require('assets/img/pngwing 1.png')}></img>
-            </a>
-            <a href="#">
-              <img src={require('assets/img/pngegg (12) 1.png')}></img>
-            </a>
-            <div>Manage preference, security, privacy</div>
-            <div>COPYRIGHT © Reed.co.uk 2023</div>
-          </Col>
-        </Row>
 
       </Container>
     </footer>

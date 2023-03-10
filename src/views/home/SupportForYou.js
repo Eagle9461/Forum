@@ -20,7 +20,9 @@ function TrendingJobsSearch() {
           <img src={require("assets/img/image 1.png")} width={"70%"} />
           <JobCard />
           <div>Invest in your future with thousands of courses to help you learn and develop.        </div>
-          <Button className="d-block m-auto" outline>Browse Courses</Button>
+          <a href="/courses">
+            <Button className="d-block m-auto" outline>Browse Courses</Button>
+          </a>
         </Col>
         <Col sm={12} md={6} className="career-advice-container">
           <div className="title-2">Career advice</div>
@@ -33,8 +35,12 @@ function TrendingJobsSearch() {
             </Col>
           </Row>
           <div style={{ marginTop: "auto" }}>
-            <div>Take your job search to the next level with our expert tips and career advice. Browse career advice   </div>
-            <Button className="d-block m-auto" outline>Browse Courses</Button>
+            <div>Take your job search to the next level with our expert tips and career advice. Browse jobs   </div>
+            <Button className="d-block m-auto" outline>
+              <a href="/jobs">
+                Browse Jobs
+              </a>
+            </Button>
           </div>
         </Col>
       </Row>

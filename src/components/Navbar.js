@@ -8,11 +8,11 @@ function NavbarHeader() {
   return (
     <Navbar collapseOnSelect className='fixed-top' expand="lg" bg="white" variant="white">
       <Container>
-        <Navbar.Brand href="/">ElonUK</Navbar.Brand>
+        <Navbar.Brand href="/">MedicsVerse</Navbar.Brand>
         <Navbar.Toggle type='button' className="navbar-toggler navbar-toggler" aria-controls="responsive-navbar-nav" >
           <i className='now-ui-icons text_align-center'></i>
         </Navbar.Toggle>
-        <Navbar.Collapse id="responsive-navbar-nav" className='text-right'>
+        <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="me-auto">
             <Nav.Link href="/jobs">Jobs</Nav.Link>
             <Nav.Link href="/courses">
@@ -29,8 +29,8 @@ function NavbarHeader() {
             <Nav.Link className='register-cv'>
               Apply for a Job
             </Nav.Link>
-            <Nav.Link>
-              Agency Portal
+            <Nav.Link href='https://business.elonuk.com/web/company_signup'>
+            Free Agencies Software
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
