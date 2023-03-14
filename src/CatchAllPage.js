@@ -14,7 +14,7 @@ function CatchAllPage() {
 
   useEffect(() => {
     async function load() {
-      const pageData = await PLASMIC.maybeFetchComponentData("Homepage");
+      const pageData = await PLASMIC.maybeFetchComponentData("Forum");
       setPageData(pageData);
       setLoading(false);
     }
@@ -28,6 +28,6 @@ function CatchAllPage() {
     return <div>Not found</div>;
   }
   // The page will already be cached from the `load` call above.
-  return <PlasmicComponent component={"Homepage"} />;
+  return <PlasmicComponent component={"Forum"} />;
 }
 export default CatchAllPage;
