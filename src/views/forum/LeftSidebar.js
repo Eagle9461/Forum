@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "reactstrap";
 import DynamicTree from 'react-dynamic-animated-tree'
-
+import Table from "./CategoryTable";
 var data = [{
     "title": "medicines",
     "id": "1",

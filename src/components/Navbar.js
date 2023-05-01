@@ -14,7 +14,8 @@ function NavbarHeader() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="me-auto">
-            <Nav.Link href="/jobs">Jobs</Nav.Link>
+            <Nav.Link href="/jobs">Jobs</Nav.Link>            
+            <Nav.Link href="/forumCategories">Forum</Nav.Link>
             <Nav.Link href="/courses">
               <p>Security	Courses</p>&nbsp;
               <Badge color="danger">Sale</Badge>
